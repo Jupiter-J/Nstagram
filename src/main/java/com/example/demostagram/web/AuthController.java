@@ -1,11 +1,17 @@
 package com.example.demostagram.web;
 
+import com.example.demostagram.web.dto.auth.SignupDto;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class AuthController {
+
+   private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     @GetMapping("/auth/signin")
     public String signinForm(){
@@ -19,7 +25,8 @@ public class AuthController {
 
     //회원가입 버튼 -> auth/signup -> auth/signin
     @PostMapping("/auth/signup")
-    public String signup(){
+    public String signup(SignupDto signupDto){
+        logger.info(signupDto.toString());
         return "auth/signin";
     }
 
