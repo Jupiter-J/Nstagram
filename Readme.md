@@ -24,6 +24,8 @@
 * 개발 환경 세팅
 * 스프링 시큐리티 초기 설정
 ### 2022-04-08 진행상황
-* 스프링 시큐리티 403에러 해결 [상세내용](https://velog.io/@jupiter-j/%EC%97%90%EB%9F%AC-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0-%EC%97%90%EB%9F%AC-403-404)
+* 스프링 시큐리티 403에러 [상세내용](https://velog.io/@jupiter-j/%EC%97%90%EB%9F%AC-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0-%EC%97%90%EB%9F%AC-403-404)
 * 회원가입 구현 
-* 롬복 log.info 주소값 반환 에러 해결 [상세내용](https://velog.io/@jupiter-j/%EC%97%90%EB%9F%ACLombok-%EB%A1%AC%EB%B3%B5-log.info-%EC%A3%BC%EC%86%8C%EA%B0%92-%EB%B0%98%ED%99%98-%EC%97%90%EB%9F%AC)
+* 롬복 log.info 주소값 반환 에러 [상세내용](https://velog.io/@jupiter-j/%EC%97%90%EB%9F%ACLombok-%EB%A1%AC%EB%B3%B5-log.info-%EC%A3%BC%EC%86%8C%EA%B0%92-%EB%B0%98%ED%99%98-%EC%97%90%EB%9F%AC)
+### 2022-04-10 진행상황
+* h2, mysql 데이터베이스 dialect 연결 에러 [상세내용](https://velog.io/@jupiter-j/%EC%97%90%EB%9F%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-table-doesnt-exist) 

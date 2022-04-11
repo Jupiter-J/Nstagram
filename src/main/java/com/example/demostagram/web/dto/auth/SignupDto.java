@@ -1,5 +1,6 @@
 package com.example.demostagram.web.dto.auth;
 
+import com.example.demostagram.domain.user.User;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +14,13 @@ public class SignupDto {
     private String email;
     private String name;
 
-
+    public User toEntity(){
+        return User.builder()
+                .username(username)
+                .password(password)
+                .email(email)
+                .name(name)
+                .build();
+    }
 
 }
