@@ -31,4 +31,6 @@
 * h2, mysql 데이터베이스 dialect 연결 에러 [상세내용](https://velog.io/@jupiter-j/%EC%97%90%EB%9F%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-table-doesnt-exist)
 * 회원가입 제약조건 추가 (중복 username 방지, 제한 글자)
 * 로그인 구현
-
+* 회원정보 수정 구현
+* 회원정보 수정 예외처리
+* CSS 페이지 적용에러 
