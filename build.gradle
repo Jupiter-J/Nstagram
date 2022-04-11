@@ -21,10 +21,17 @@ dependencies {
     implementation 'javax.servlet:jstl'  //jsp
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 
+    implementation 'org.springframework.boot:spring-boot-starter-validation'     // validation
+    implementation 'org.qlrm:qlrm:3.0.4'     // qlrm
+    implementation 'org.springframework.security:spring-security-taglibs'     // Security Tag
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'     // JSP Template
+    implementation 'javax.servlet:jstl'     // JSTL
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 

@@ -21,12 +21,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(length = 20,unique = true) //제약조건의 하나로 해당 컬럼에 동일한 값이 들어가지 않도록 하는 제약조건
     private String username;
+    @Column(nullable = false) //필수 입력
     private String password;
-
+    @Column(nullable = false)
     private String name;
+
     private String website; //웹사이트
     private String bio;  //자기소개
+
+    @Column(nullable = false)
     private String email;
     private String phone;
     private String gender;
