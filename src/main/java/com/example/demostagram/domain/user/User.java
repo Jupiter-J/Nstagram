@@ -1,5 +1,7 @@
 package com.example.demostagram.domain.user;
 
+import com.example.demostagram.domain.image.Image;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 //JPA - Java Persistence API (자바로 데이터를 영구적으로 저장(DB)할수 있는 API를 제공)
 @Entity
@@ -38,6 +41,13 @@ public class User {
 
     private String profileImageUrl; //사진
     private String role; //권한
+
+    //한명의 유저는 여러개의 이미지를 올릴 수 있다 (이미지 클래스의 user)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY) //1. 연관관계의 주인이 아니다. 테이블의 칼럼을 만들지 않는다.
+    @JsonIgnoreProperties({"user"})
+    private List<Image> images;                           //2. User를 select할때 해당 user id로 등록된 image들을 다 가져와
+
+
     private LocalDateTime createData;
 
     //DB에 현재 시간을 저장

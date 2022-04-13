@@ -1,9 +1,14 @@
 package com.example.demostagram.service;
 
+import com.example.demostagram.domain.Subsribe.SubscribeRepository;
 import com.example.demostagram.domain.user.User;
 import com.example.demostagram.domain.user.UserRepository;
+import com.example.demostagram.handler.ex.CustomException;
 import com.example.demostagram.handler.ex.CustomValidationApiException;
+import com.example.demostagram.handler.ex.CustomValidationException;
+import com.example.demostagram.web.dto.user.UserProfileDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +19,26 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final SubscribeRepository subscribeRepository;
+
+    @Value("${file.path}")
+    private String uploadFolder;
+
+    @Transactional(readOnly = true)
+    public UserProfileDto 회원프로필(int pageUserId, int principalId) {
+        UserProfileDto dto = new UserProfileDto();
+
+        // SELECT * FROM image WHERE userId = :userId;
+        User userEntity = userRepository.findById(pageUserId).orElseThrow(() -> {
+            // throw -> return 으로 변경
+            return new CustomException("해당 프로필 페이지는 없는 페이지입니다.");
+        });
+
+        dto.setUser(userEntity);
+        dto.setPageOwnerState(pageUserId == principalId);
+        dto.setImageCount(userEntity.getImages().size());
+        return dto;
+    }
 
     @Transactional
     public User 회원수정(int id, User user) {
@@ -37,5 +62,6 @@ public class UserService {
         return userEntity;
     }
     // 더티체킹이 일어나서 업데이트가 완료됨.
+
 
 }

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ include file="../layout/header.jsp"%>
 
 <main class="main">
@@ -12,7 +12,7 @@
 				<div class="sl__item__header">
 					<div>
 						<img class="profile-image" src="#"
-							 onerror="this.src='/images/person.jpeg'" />
+							onerror="this.src='/images/person.jpeg'" />
 					</div>
 					<div>TherePrograming</div>
 				</div>

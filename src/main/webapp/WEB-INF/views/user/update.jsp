@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
 <%@ include file="../layout/header.jsp"%>
 
@@ -27,14 +27,14 @@
 					<div class="item__title">이름</div>
 					<div class="item__input">
 						<input type="text" name="name" placeholder="이름"
-							   value="${principal.user.name}" required="required" />
+							value="${principal.user.name}" required="required" />
 					</div>
 				</div>
 				<div class="content-item__03">
 					<div class="item__title">유저네임</div>
 					<div class="item__input">
 						<input type="text" name="username" placeholder="유저네임"
-							   value="${principal.user.username}" readonly="readonly" />
+							value="${principal.user.username}" readonly="readonly" />
 					</div>
 				</div>
 				<div class="content-item__04">
@@ -47,7 +47,7 @@
 					<div class="item__title">웹사이트</div>
 					<div class="item__input">
 						<input type="text" name="website" placeholder="웹 사이트"
-							   value="${principal.user.website}" />
+							value="${principal.user.website}" />
 					</div>
 				</div>
 				<div class="content-item__06">
@@ -67,14 +67,14 @@
 					<div class="item__title">이메일</div>
 					<div class="item__input">
 						<input type="text" name="email" placeholder="이메일"
-							   value="${principal.user.email}" readonly="readonly" />
+							value="${principal.user.email}" readonly="readonly" />
 					</div>
 				</div>
 				<div class="content-item__09">
 					<div class="item__title">전회번호</div>
 					<div class="item__input">
 						<input type="text" name="phone" placeholder="전화번호"
-							   value="${principal.user.phone}" />
+							value="${principal.user.phone}" />
 					</div>
 				</div>
 				<div class="content-item__10">
