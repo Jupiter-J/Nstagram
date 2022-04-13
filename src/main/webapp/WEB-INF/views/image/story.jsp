@@ -14,11 +14,11 @@
 						<img class="profile-image" src="#"
 							onerror="this.src='/images/person.jpeg'" />
 					</div>
-					<div>TherePrograming</div>
+					<div>Nstar_0_0</div>
 				</div>
 
 				<div class="sl__item__img">
-					<img src="/images/home.jpg" />
+					<img src="/images/wine.jpg" />
 				</div>
 
 				<div class="sl__item__contents">
@@ -32,14 +32,14 @@
 					<span class="like"><b id="storyLikeCount-1">3 </b>likes</span>
 
 					<div class="sl__item__contents__content">
-						<p>등산하는 것이 너무 재밌네요</p>
+						<p>날씨 좋아서 피크닉중~! </p>
 					</div>
 
 					<div id="storyCommentList-1">
 
 						<div class="sl__item__contents__comment" id="storyCommentItem-1">
 							<p>
-								<b>Lovely :</b> 부럽습니다.
+								<b>Lovely :</b> 와 어디야? 나 두고 언제 놀러갔어
 							</p>
 
 							<button>

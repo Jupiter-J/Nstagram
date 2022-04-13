@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="img-box">
-                    <a href=""> <img src="/images/home.jpg"/>
+                    <a href=""> <img src="/images/wine.jpg"/>
                     </a>
                     <div class="comment">
                         <a href="#" class=""> <i class="fas fa-heart"></i><span>0</span>
