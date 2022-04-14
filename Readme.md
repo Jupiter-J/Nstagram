@@ -44,7 +44,7 @@
 * 페이지 이동시 noSession 에러 [상세내용](https://velog.io/@jupiter-j/%EC%97%90%EB%9F%AC-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-no-Session) 
 * 업데이트한 게시물의 총 갯수 반영 구현
 ### 2022-04-14 진행상황
-* 구독(팔로우) 서비스 API DB 에러 [상세내용](https://velog.io/write?id=1d407094-1dc7-4422-af96-a6248cf3444a) 
+* 구독(팔로우) 서비스 API DB 에러 [상세내용](https://velog.io/@jupiter-j/DB-%EC%97%90%EB%9F%AC-Unknown-column-fromUserId-in-field-list) 
 
 ---
 ## ERD
