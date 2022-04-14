@@ -18,7 +18,7 @@
 
 ## 이론정리
 * [CSRF 토큰이란?](https://velog.io/@jupiter-j/CSRF%ED%86%A0%ED%81%B0%EC%9D%B4%EB%9E%80)
-* [UUID란?]()
+* [UUID란?](https://velog.io/@jupiter-j/UUID%EB%9E%80-Universally-unique-identifier)
 
 ## 🧭 개발일지
 ### 2022-04-07 진행상황
