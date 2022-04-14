@@ -30,7 +30,7 @@ public class UserApiController {
 
     @PutMapping("/api/user/{id}")
     public CMRespDto<?> update(
-            @PathVariable int id,
+            @PathVariable long id,
             @Valid UserUpdateDto userUpdateDto,
             BindingResult bindingResult, // 꼭 @Valid 가 적혀있는 다음 파라메터 적어야됨
             @AuthenticationPrincipal PrincipalDetails principalDetails) {

@@ -22,7 +22,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/user/{pageUserId}")
-    public String profile(@PathVariable int pageUserId, Model model, @AuthenticationPrincipal PrincipalDetails principalDetails) {
+    public String profile(@PathVariable long pageUserId, Model model, @AuthenticationPrincipal PrincipalDetails principalDetails) {
         UserProfileDto dto = userService.회원프로필(pageUserId, principalDetails.getUser().getId());
         model.addAttribute("dto", dto);
         return "user/profile";
@@ -31,7 +31,7 @@ public class UserController {
 
 
     @GetMapping("/user/{id}/update")
-    public String update(@PathVariable int id , @AuthenticationPrincipal PrincipalDetails principalDetails){
+    public String update(@PathVariable long id , @AuthenticationPrincipal PrincipalDetails principalDetails){
         //1. 추천
 //        System.out.println("세션정보: " + principalDetails.getUser());
 

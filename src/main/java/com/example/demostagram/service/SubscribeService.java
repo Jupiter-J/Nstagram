@@ -15,7 +15,7 @@ public class SubscribeService {
 
 
     @Transactional //데이터 추가, 갱신, 삭제 등으로 이루어진 작업을 처리하던 중 오류가 발생했을 때 모든 작업들을 원상태로 되돌릴 수 있다
-    public void 구독하기(int fromUserId, int toUserId){
+    public void 구독하기(long fromUserId, long toUserId){
         try {
             subscribeRepository.mSubscribe(fromUserId, toUserId);
         }catch (Exception e){
@@ -24,7 +24,7 @@ public class SubscribeService {
     }
 
     @Transactional
-    public void 구독취소하기(int fromUserId, int toUserId){
+    public void 구독취소하기(long fromUserId, long toUserId){
         subscribeRepository.mUnSubscribe(fromUserId, toUserId);
 
     }

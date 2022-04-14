@@ -25,7 +25,7 @@ public class UserService {
     private String uploadFolder;
 
     @Transactional(readOnly = true)
-    public UserProfileDto 회원프로필(int pageUserId, int principalId) {
+    public UserProfileDto 회원프로필(long pageUserId, long principalId) {
         UserProfileDto dto = new UserProfileDto();
 
         // SELECT * FROM image WHERE userId = :userId;
@@ -41,7 +41,7 @@ public class UserService {
     }
 
     @Transactional
-    public User 회원수정(int id, User user) {
+    public User 회원수정(long id, User user) {
         // 1. 영속화
         // 1. 무조건 찾았다. 걱정마 get()
         // 2. 못찾았어 익섹션 발동시킬께 orElseThrow()

@@ -22,7 +22,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(length = 20,unique = true) //제약조건의 하나로 해당 컬럼에 동일한 값이 들어가지 않도록 하는 제약조건
     private String username;

@@ -22,7 +22,7 @@ public class SubscribeApiController {
     //구독하기
     @PostMapping("/api/subscribe/{toUserId}")  //로그인한 사람이 구독을 함
     public ResponseEntity<?> subscribe(@AuthenticationPrincipal PrincipalDetails principalDetails,
-                                       @PathVariable int toUserId){
+                                       @PathVariable long toUserId){
         subscribeService.구독하기(principalDetails.getUser().getId(), toUserId);
         return new ResponseEntity<>(new CMRespDto<>(1,"구독하기 성공", null), HttpStatus.OK);
     }
@@ -30,7 +30,7 @@ public class SubscribeApiController {
     //구독취소
     @DeleteMapping("/api/subscribe/{toUserId}")
     public ResponseEntity<?> unSubscribe(@AuthenticationPrincipal PrincipalDetails principalDetails,
-                                       @PathVariable int toUserId){
+                                       @PathVariable long toUserId){
         subscribeService.구독취소하기(principalDetails.getUser().getId(), toUserId);
         return new ResponseEntity<>(new CMRespDto<>(1,"구독취소 성공", null), HttpStatus.OK);
     }
