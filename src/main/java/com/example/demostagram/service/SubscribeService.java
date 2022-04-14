@@ -15,17 +15,17 @@ public class SubscribeService {
 
 
     @Transactional //데이터 추가, 갱신, 삭제 등으로 이루어진 작업을 처리하던 중 오류가 발생했을 때 모든 작업들을 원상태로 되돌릴 수 있다
-    public void 구독하기(long fromUserId, long toUserId){
+    public void 구독하기(Long fromUserid, Long toUserid){
         try {
-            subscribeRepository.mSubscribe(fromUserId, toUserId);
+            subscribeRepository.mSubscribe(fromUserid, toUserid);
         }catch (Exception e){
             throw new CustomApiException("이미 구독하였습니다 ");
         }
     }
 
     @Transactional
-    public void 구독취소하기(long fromUserId, long toUserId){
-        subscribeRepository.mUnSubscribe(fromUserId, toUserId);
+    public void 구독취소하기(Long fromUserid, Long toUserid){
+        subscribeRepository.mUnSubscribe(fromUserid, toUserid);
 
     }
 

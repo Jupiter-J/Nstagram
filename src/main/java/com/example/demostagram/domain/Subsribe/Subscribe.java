@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(
+        name = "subscribe",
         uniqueConstraints = {
                 @UniqueConstraint(
                         name="subscribe_uk",
@@ -29,7 +30,7 @@ public class Subscribe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @JoinColumn(name = "fromUserId")
     @ManyToOne
@@ -41,10 +42,10 @@ public class Subscribe {
 
     private LocalDateTime createData;
 
-    @PrePersist
-    public void createData(){  //현재시간을 주입하는 함수 생성
-        this.createData = LocalDateTime.now();
-    }
+//    @PrePersist
+//    public void createData(){  //현재시간을 주입하는 함수 생성
+//        this.createData = LocalDateTime.now();
+//    }
 
 
 

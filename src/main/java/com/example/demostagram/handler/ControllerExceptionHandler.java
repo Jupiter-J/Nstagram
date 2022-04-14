@@ -31,22 +31,21 @@ public class ControllerExceptionHandler {
     }
 
     @ExceptionHandler(CustomException.class)
-    public String exception(CustomException e) {
+    public String validationException(CustomException e) {
         return Script.back(e.getMessage());
     }
-
 
 
     //데이터리턴
     @ExceptionHandler(CustomValidationApiException.class)
     public ResponseEntity<?> validationApiException(CustomValidationApiException e) {
-        System.out.println("실행됐나===========?");
+        System.out.println("== validationApiException에러 ===========");
         return new ResponseEntity<>(new CMRespDto<>(-1, e.getMessage(), e.getErrorMap()), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(CustomApiException.class)
     public ResponseEntity<?> apiException(CustomApiException e) {
-        System.out.println("실행됐나===========?");
+        System.out.println("== apiException에러 ===========");
         return new ResponseEntity<>(new CMRespDto<>(-1, e.getMessage(), null), HttpStatus.BAD_REQUEST);
     }
 
