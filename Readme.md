@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/badge/SpringBoot-badge&logoColor=white"> <img src="https://img.shields.io/badge/JPA-E34F26?badge&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-FCC624?badge&logoColor=black"> <img src="https://img.shields.io/badge/SpringSecurity-4FC08D?badge&logoColor=white">
 
 
-![image](https://user-images.githubusercontent.com/73453283/163678077-d89e1142-480b-4119-a17f-b44f78fda176.png)
+
 
 ## 개발환경
 * backend
