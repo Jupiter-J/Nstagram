@@ -2,7 +2,7 @@
 # N스타그램
 ---
 ## 기술스택
-<img src="https://img.shields.io/badge/SpringBoot-badge&logoColor=white"> <img src="https://img.shields.io/badge/JPA-E34F26?badge&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-FCC624?badge&logoColor=black"> <img src="https://img.shields.io/badge/SpringSecurity-4FC08D?badge&logoColor=white">
+<img src="https://img.shields.io/badge/SpringBoot-badge&logoColor=white"> <img src="https://img.shields.io/badge/JPA-E34F26?badge&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-FCC624?badge&logoColor=black"> <img src="https://img.shields.io/badge/SpringSecurity-4FC08D?badge&logoColor=white"> <img src="https://img.shields.io/badge/RDS-003545?&logo&logoColor=white">
 
 
 
@@ -53,7 +53,69 @@
 * 구독자 정보 쿼리 
 
 ---
-## ERD
+## 구현한 기능
+1. [회원가입 & 로그인](#회원가입-&-로그인)
+2. [사진 등록](#사진-등록)
+3. [회원정보 변경](#회원정보-변경)
+4. [다른 유저의 페이지 접속시 기능 변경](#다른-유저의-페이지-접속시-기능-변경)
+5. [구독(팔로우) 기능 1](#구독(팔로우)-기능-1)
+6. [구독(팔로우) 기능 2](#구독(팔로우)-기능-2)
+
+<br/><br/>
+### 회원가입 & 로그인
+* 회원가입시 동일한 유저네임을 넣을 경우 에러 반환 
+
+![](../../../../../Documents/ScreenVideo/GIF/login.gif)
+
+<br/><br/>
+### 사진 등록
+* 이미지를 넣지 않을 경우 에러 반환
+* 이미지는 UUID를 통해 고유 식별자 부여 
+* 이미지 추가시 게시물 수 증가  
+
+![](../../../../../Documents/ScreenVideo/GIF/upload.gif)
+ 
+![image](https://user-images.githubusercontent.com/73453283/163676465-f876e503-76a2-44c9-a36b-4bd3b9ae45fb.png)
+
+<br/><br/>
+### 회원정보 변경
+![](../../../../../Documents/ScreenVideo/GIF/edit.gif)
+
+<br/><br/>
+### 다른 유저의 페이지 접속시 기능 변경
+1. id = 1 Nstarsss 로그인한 유저
+2. id = 2 new 다른 유저
+3. 로그인한 유저가 id=2 유저의 페이지로 이동하였을 경우, 유저네임 옆의 기능이 바뀜
+4. 로그인한 유저의 페이지 [사진등록]
+5. 다른 유저의 페이지 [구독하기]
+* user / { userid } 로 다른 유저의 페이지 이동 가능
+* user / { userid } 에서 DB에 등록된 유저가 아니면 에러
+
+![](../../../../../Documents/ScreenVideo/GIF/trans.gif)
+
+<br/><br/>
+### 구독 (팔로우) 기능 1
+1. 로그인한 유저 id=1가 id=2 페이지에서 구독
+2. 구독 정보 수 증가
+3. 구독 정보 리스트에서 구독 취소 가능
+
+![](../../../../../Documents/ScreenVideo/GIF/follow.gif)
+
+<br/><br/>
+### 구독 (팔로우) 기능 2
+1. id=1 Nstarsss, id=2 new , id=3 love
+2. 로그인한 유저 id=1가 id=2 유저의 페이지에서 구독 리스트를 확인
+3. 만약 로그인한 유저를 구독한 상태면 [구독하기]가 뜨지 않는다
+4. id=2가 구독한 리스트를 보고 id=3 구독 가능 
+* 네이티브 쿼리와  qlrm를 사용하여 구현 
+
+![](../../../../../Documents/ScreenVideo/GIF/subscribe.gif)
+![image](https://user-images.githubusercontent.com/73453283/163678077-d89e1142-480b-4119-a17f-b44f78fda176.png)
+
+
+
+<br/><br/>
+## ERD 명세 
 1. 인스타그램에서 구독(팔로우) 기능
    * 유저 A는 여러명의 유저를 구독할 수 있다
    * 유저 A는 여러명의 유저로부터 구독을 받을 수 있다
