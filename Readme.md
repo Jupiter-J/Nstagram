@@ -19,6 +19,8 @@
 ## 이론정리
 * [CSRF 토큰이란?](https://velog.io/@jupiter-j/CSRF%ED%86%A0%ED%81%B0%EC%9D%B4%EB%9E%80)
 * [UUID란?](https://velog.io/@jupiter-j/UUID%EB%9E%80-Universally-unique-identifier)
+* [인스타그램 구독(팔로우) 쿼리공부 ]()
+
 
 ## 🧭 개발일지
 ### 2022-04-07 진행상황
@@ -45,6 +47,10 @@
 * 업데이트한 게시물의 총 갯수 반영 구현
 ### 2022-04-14 진행상황
 * 구독(팔로우) 서비스 API DB 에러 [상세내용](https://velog.io/@jupiter-j/DB-%EC%97%90%EB%9F%AC-Unknown-column-fromUserId-in-field-list) 
+### 2022-04-15 진행상황
+* 구독 수 증가값 반영 기능 (js, jsp)
+* 구독 여부 확인 기능 (js, jsp)
+* 구독자 정보 쿼리 
 
 ---
 ## ERD

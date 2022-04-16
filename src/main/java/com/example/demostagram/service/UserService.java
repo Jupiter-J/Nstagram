@@ -37,6 +37,14 @@ public class UserService {
         dto.setUser(userEntity);
         dto.setPageOwnerState(pageUserId == principalId);
         dto.setImageCount(userEntity.getImages().size());
+
+        int subscribeState = subscribeRepository.mSubscribeState(pageUserId, principalId);
+        int subscribeCount = subscribeRepository.mSubscribeCount(pageUserId);
+
+        dto.setSubscribeState(subscribeState == 1);
+        dto.setSubscribeCount(subscribeCount);
+
+
         return dto;
     }
 

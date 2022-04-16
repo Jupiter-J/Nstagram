@@ -5,6 +5,7 @@ import com.example.demostagram.domain.user.User;
 import com.example.demostagram.service.SubscribeService;
 import com.example.demostagram.service.UserService;
 import com.example.demostagram.web.dto.CMRespDto;
+import com.example.demostagram.web.dto.subsribe.SubscribeDto;
 import com.example.demostagram.web.dto.user.UserUpdateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,17 @@ public class UserApiController {
 
     private final UserService userService;
     private final SubscribeService subscribeService;
+
+    @GetMapping("/api/user/{pageUserId}/subscribe")
+    public ResponseEntity<?> subscribeList(@PathVariable Long pageUserId,
+                                           @AuthenticationPrincipal PrincipalDetails principalDetails) {
+        List<SubscribeDto> dtoList = subscribeService.구독리스트(principalDetails.getUser().getId(), pageUserId);
+
+        return new ResponseEntity<>(new CMRespDto<>(1, "구독자 정보 리스트 가져오기 성공", dtoList), HttpStatus.OK);
+    }
+
+
+
 
 
     @PutMapping("/api/user/{id}")
