@@ -66,7 +66,7 @@
 ### 회원가입 & 로그인
 * 회원가입시 동일한 유저네임을 넣을 경우 에러 반환 
 
-![](../../../../../Documents/ScreenVideo/GIF/login.gif)
+![login](https://user-images.githubusercontent.com/73453283/163678589-5701d4f7-767e-43b8-a147-145b2f0c2d72.gif)
 
 <br/><br/>
 ### 사진 등록
@@ -74,13 +74,13 @@
 * 이미지는 UUID를 통해 고유 식별자 부여 
 * 이미지 추가시 게시물 수 증가  
 
-![](../../../../../Documents/ScreenVideo/GIF/upload.gif)
+![upload](https://user-images.githubusercontent.com/73453283/163678622-7d60cab2-bc5c-4b89-a410-8a5a02706ae3.gif)
  
 ![image](https://user-images.githubusercontent.com/73453283/163676465-f876e503-76a2-44c9-a36b-4bd3b9ae45fb.png)
 
 <br/><br/>
 ### 회원정보 변경
-![](../../../../../Documents/ScreenVideo/GIF/edit.gif)
+![edit](https://user-images.githubusercontent.com/73453283/163678644-367d942b-e5f7-42a0-826d-4698de8abf5b.gif)
 
 <br/><br/>
 ### 다른 유저의 페이지 접속시 기능 변경
@@ -92,7 +92,7 @@
 * user / { userid } 로 다른 유저의 페이지 이동 가능
 * user / { userid } 에서 DB에 등록된 유저가 아니면 에러
 
-![](../../../../../Documents/ScreenVideo/GIF/trans.gif)
+![trans](https://user-images.githubusercontent.com/73453283/163678657-b5fa801b-1dfd-4c9b-aec6-2c62598c0364.gif)
 
 <br/><br/>
 ### 구독 (팔로우) 기능 1
@@ -100,7 +100,7 @@
 2. 구독 정보 수 증가
 3. 구독 정보 리스트에서 구독 취소 가능
 
-![](../../../../../Documents/ScreenVideo/GIF/follow.gif)
+![follow](https://user-images.githubusercontent.com/73453283/163678676-8e0b1cfb-e11b-413d-9c92-cb332b99ad52.gif)
 
 <br/><br/>
 ### 구독 (팔로우) 기능 2
@@ -110,7 +110,7 @@
 4. id=2가 구독한 리스트를 보고 id=3 구독 가능 
 * 네이티브 쿼리와  qlrm를 사용하여 구현 
 
-![](../../../../../Documents/ScreenVideo/GIF/subscribe.gif)
+![subscribe](https://user-images.githubusercontent.com/73453283/163678690-f5696fca-fadc-415e-a472-ee3f9aced764.gif)
 ![image](https://user-images.githubusercontent.com/73453283/163678077-d89e1142-480b-4119-a17f-b44f78fda176.png)
 
 
